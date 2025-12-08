@@ -11,6 +11,7 @@ class Contact {
 		std::string PhoneNumber;
 		std::string DarkestSecret;
 	public:
+		Contact();
 		std::string	getFirstName();
 		std::string	getLastName();
 		std::string	getNickName();
@@ -22,3 +23,4 @@ class Contact {
 		void		setPhoneNumber(std::string input);
 		void		setDarkestSecret(std::string input);
 };
+

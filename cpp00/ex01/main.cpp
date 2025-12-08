@@ -1,25 +1,19 @@
-#include <iostream>
-#include <string>
-
-class Contact {
-    private:
-		std::string nickname;
-	public:
-		std::string getNickname() {
-			return (nickname);
-		}
-		void setNickname(std::string str) {
-			nickname = str;
-		}
-};
+#include "PhoneBook.hpp"
 
 int main ()
 {
-	Contact myObj;
-	std::string tmp;
-    std::cout << "Enter your nickname: ";
-    getline(std::cin, tmp);
-	myObj.setNickname(tmp);
-    std::cout << "Hello, " << myObj.getNickname();
+	std::string	command;
+	PhoneBook	MyPhone;
+
+	while (true)
+	{
+		getline(std::cin, command);
+		if (command == "ADD")
+			MyPhone.add();
+		else if (command == "SEARCH")
+			MyPhone.search();
+		else if (command == "EXIT")
+			MyPhone.exit();	
+	}
 }
 
