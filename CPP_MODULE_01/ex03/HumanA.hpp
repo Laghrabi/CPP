@@ -6,12 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 15:03:20 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/13 15:13:02 by claghrab         ###   ########.fr       */
+/*   Updated: 2025/12/23 16:15:43 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_H
-#define HUMAN_H
+#define HUMANA_H
 
 #include <iostream>
 #include "Weapon.hpp"

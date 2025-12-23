@@ -1,6 +1,6 @@
 NAME = Zombies
-C++ = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
 FILES = Zombie.cpp main.cpp newZombie.cpp \
@@ -12,7 +12,7 @@ OBJ = $(SRC:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-	$(C++) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

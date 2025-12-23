@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 15:40:04 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/16 23:47:46 by claghrab         ###   ########.fr       */
+/*   Updated: 2025/12/23 17:00:29 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void    Harl::complain(std::string level)
     {
         if (level == levels[i])
         {
-            Harl::choose_case(++i);
+            choose_case(++i);
             return ;
         }
         i++;
