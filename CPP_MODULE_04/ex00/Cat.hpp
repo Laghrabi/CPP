@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 23:49:24 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 01:18:07 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 02:08:36 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Cat : public Animal {
 		Cat& operator=(const Cat& other);
 		~Cat();
 
-		void	makeSound(void);
+		void	makeSound(void) const;
 };
 
 #endif

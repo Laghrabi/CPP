@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 01:40:37 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 01:41:53 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 02:07:31 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "WrongAnimal Deconstructor called" << std::endl;
 }
 
-void    WrongAnimal::makeSound(void)
+void    WrongAnimal::makeSound(void) const
 {
     std::cout << "This WrongAnimal is mute." << std::endl;
 }
 
-std::string WrongAnimal::getType(void)
+std::string WrongAnimal::getType(void) const
 {
     return (this->_type);
 }

@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 01:37:04 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 01:38:54 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 02:06:16 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class	WrongAnimal {
 		WrongAnimal& operator=(const WrongAnimal& other);
 		~WrongAnimal();
 
-		void	        makeSound(void);
-		std::string		getType(void);
+		void	        makeSound(void) const;
+		std::string		getType(void) const;
 };
 
 #endif

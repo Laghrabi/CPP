@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 01:08:44 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 01:22:36 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 02:08:30 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(): Animal()
 	std::cout << "Cat Default Constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &other): Animal()
+Cat::Cat(const Cat &other): Animal(other)
 {
 	std::cout << "Cat Copy Constructor called" << std::endl;
 	*this = other;
@@ -37,7 +37,7 @@ Cat::~Cat()
 	std::cout << "Cat Deconstructor called" << std::endl;
 }
 
-void    Cat::makeSound(void)
+void    Cat::makeSound(void) const
 {
     std::cout << this->getType() << " sound is: [Meeoow]" << std::endl;
 }
