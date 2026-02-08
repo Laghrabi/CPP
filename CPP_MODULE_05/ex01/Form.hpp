@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 02:49:54 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/05 03:32:07 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/02/08 22:36:58 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class   Form {
         private:
             const std::string   _name;
             bool                _signed;
-            int                 _GradeToSign;
-            int                 _GradeToExecute;
+            unsigned int                 _GradeToSign;
+            unsigned int                 _GradeToExecute;
         public:
             Form();
             Form(std::string name, int GradeToSign, int GradeToExecute);

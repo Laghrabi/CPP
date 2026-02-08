@@ -6,11 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 01:30:42 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/05 02:40:16 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/02/08 22:35:53 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(unsigned int grade) : _name("default")
 {
@@ -81,4 +82,18 @@ std::ostream& operator<< (std::ostream& o, Bureaucrat& bo)
 {
     o << bo.getName() << ", bureaucrat grade " << bo.getGrade();
     return (o);
+}
+
+void    Bureaucrat::signForm(Form& form)
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << _name << " signed " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << _name << " couldn't sign " << form.getName() 
+                  << " because " << e.what() << std::endl;
+    }
 }

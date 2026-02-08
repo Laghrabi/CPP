@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 03:32:43 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/05 04:29:23 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/02/08 22:23:34 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,23 @@ void		Form::beSigned( Bureaucrat & src )
 	if (src.getGrade() > this->_GradeToSign)
 		throw  Form::GradeTooLowException();
 	this->_signed = true;
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return ("Grade is too high! Maximum is 1.");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return ("Grade is too low! Minimum is 150.");
+}
+
+std::ostream& operator<<(std::ostream& os, Form& form)
+{
+    os << "Form " << form.getName() 
+       << ", signed: " << (form.getSigned() ? "yes" : "no")
+       << ", sign grade: " << form.getGradeToSign()
+       << ", exec grade: " << form.getGradeToExecute();
+    return (os);
 }
